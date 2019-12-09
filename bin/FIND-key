@@ -1,0 +1,13 @@
+#!/bin/bash
+
+KEY="$1"
+OUTFILE=$KEY-files
+
+FIND_OPT="-iname"
+
+SOURCE=/media/VIDEO
+
+find $SOURCE $FIND_OPT "*${KEY}*" > $OUTFILE
+
+echo "## FILES FOUND :" `wc -l $OUTFILE`
+#ls -la $OUTFILE
